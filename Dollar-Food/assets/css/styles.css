@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/quicksand/Quicksand-Light.eot');
+  src: url('../fonts/quicksand/Quicksand-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/quicksand/Quicksand-Light.woff2') format('woff2'),
+      url('../fonts/quicksand/Quicksand-Light.woff') format('woff'),
+      url('../fonts/quicksand/Quicksand-Light.ttf') format('truetype'),
+      url('../fonts/quicksand/Quicksand-Light.svg#Quicksand-Light') format('svg');
+  /* font-weight: 300; */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset Browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+}
+
+.header-top {
+  width: 100%;
+  height: 35px;
+  background-color: #006a31;
+}
+.header-top p {
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+/* Header Main */
+.header-main {
+  width: 100%;
+  height: 90px;
+  background-color: pink;
+}
+.wrap-main {
+  display: flex;
+}
+.logo {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 160px;
+  object-fit: cover;
+}
+
+.search {
+  /* width: 40%; */
+  /* background-color: orange; */
+  height: 90px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search input {
+  width: calc(350px - 40px);
+  height: 40px;
+  background-color: blanchedalmond;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 10px;
+}
+.search input:focus {
+  outline: none;
+}
+.search button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e31837;
+  color: #fff;
+  position: absolute;
+  right: -2px;
+}
+
+
+
+
+
+
+
+
+
+.shipping {
+  width: 20%;
+  height: 90px;
+  background-color: green;
+}
+.icon-user {
+  width: 20%;
+  height: 90px;
+  background-color: blue;
+}
+.regiters {
+  width: 20%;
+  height: 90px;
+  background-color: violet;
+}
