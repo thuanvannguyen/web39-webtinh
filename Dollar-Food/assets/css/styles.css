@@ -82,20 +82,20 @@
   position: absolute;
   right: -2px;
 }
-
-
-
-
-
-
-
-
+.search button i {
+  font-size: 17px;
+}
 
 .shipping {
   width: 20%;
   height: 90px;
   background-color: green;
 }
+
+
+
+
+
 .icon-user {
   width: 20%;
   height: 90px;
