@@ -3,4 +3,63 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* MENU CSS */
+.header {
+  width: 100%;
+  background-color: #006a31;
+  height: 54px;
+}
+
+.wrap-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+}
+
+.menu-main {
+  display: flex;
+  height: 54px;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.menu-main li {
+  list-style: none;
+  margin-right: 8px;
+}
+
+.menu-main li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.menu-main li a:hover {
+  background-color: #e31837;
+}
+
+.menu-main .active a {
+  background-color: #e31837;
+}
+
+.button-login {
+  border: 1px solid #ddd;
+  padding: 7px 25px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.2s;
+}
+
+.button-login:hover {
+  background-color: #e31837;
+  border: 1px solid #e31837;
+  color: #fff;
 }
