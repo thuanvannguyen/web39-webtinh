@@ -341,9 +341,11 @@ html {
     position: fixed;
     height: 100%;
     top: 0;
+    left: -100%;
     z-index: 99999;
     background-color: #fff;
     border-left: 1px solid #ddd;
+    transition: all .5s;
   }
   .header-bottom .menu-main {
     padding-top: 100px ;
@@ -368,14 +370,6 @@ html {
     font-size: 30px;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
