@@ -47,4 +47,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setActiveMenu(".menu-main li");
 
+
+  // Chuc nang bam login
+  // Check xem nguoi dung dang nhap hay chua.
+  // Neu dang nhap roi -> Chuyen huong toi dashboad
+  // Chua dang nhap -> trang login
+  let loginButton = document.querySelector(".button-login");
+  // console.log(loginButton);
+
+  loginButton.addEventListener("click", ()=>{
+    
+    let token = localStorage.getItem("TOKEN_LOGIN");
+    console.log(token);
+
+    if(token) {
+      window.location.href = "./dashboad.html";
+    }else {
+      window.location.href = "./login.html";
+    }
+  })
 });
