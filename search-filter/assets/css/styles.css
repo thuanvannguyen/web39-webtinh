@@ -1,0 +1,45 @@
+/* Reset Browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+  height: 86px;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header form {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.header form input {
+  border: 1px solid #ddd;
+  border-radius: 22px;
+  padding: 10px 30px;
+}
+.header form input:focus {
+  outline: none;
+}
+
+
+/* CONTENT MAIN */
+.content-main {
+  padding-top: 100px;
+}
+
+.content-main .card {
+  margin-bottom: 25px;
+}
+.content-main .card img {
+  max-height: 320px;
+  object-fit: cover;
+}
