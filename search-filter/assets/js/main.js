@@ -76,10 +76,22 @@ const filterByCategory = (filteredData, namCheckbox, nuCheckBox) => {
   console.log(namCheckbox);
   console.log(nuCheckBox);
 
-
+  // Nguoi dung khong chon category nao -> tra ve array nhan duoc
   if(!namCheckbox && !nuCheckBox) {
     return filteredData;
   }
+
+  const resultCheckbox = filteredData.filter((item)=>{
+    // console.log(item);
+    const categoryTitle = item.category.toLowerCase();
+    console.log(categoryTitle);
+
+    return ((namCheckbox && categoryTitle === "nam") || (nuCheckBox && categoryTitle === "nữ")); //return cua ham filter
+  });
+
+  // console.log(resultCheckbox);
+  return resultCheckbox; //return funtion filterByCategory();
+
 }
 
 //  Hàm tổng hợp để lọc sản phẩm
@@ -103,12 +115,11 @@ const filterProducts = () => {
 
 
   // Loc san pham theo category (checkbox)
-  filterByCategory(filteredData, namCheckbox, nuCheckBox);
+  // console.log(filterByCategory(filteredData, namCheckbox, nuCheckBox));
+  filteredData = filterByCategory(filteredData, namCheckbox, nuCheckBox);
 
-
-
-
-  renderProducts(filteredData); // Hiển thị sản phẩm đã lọc
+  // Hiển thị sản phẩm đã lọc
+  renderProducts(filteredData); 
 }
 
 let clearTime;
