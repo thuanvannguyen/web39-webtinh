@@ -109,12 +109,9 @@ const filterProducts = () => {
 
 
   renderProducts(filteredData); // Hiển thị sản phẩm đã lọc
-
-
 }
 
 let clearTime;
-
 // Lắng nghe sự kiện nhập liệu trên ô tìm kiếm
 let inputSearch = document.querySelector(".search");
 inputSearch.addEventListener("input", () => {
@@ -122,11 +119,8 @@ inputSearch.addEventListener("input", () => {
 
   // Neu sau 3s khong nhap nua thi moi goi vao filterProducts();
   clearTime = setTimeout(() => {
-
     filterProducts();
-
   }, 1000); //1000ms -> 1s
-
 
 });
 
