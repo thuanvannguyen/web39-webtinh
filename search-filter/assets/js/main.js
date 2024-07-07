@@ -70,23 +70,48 @@ const filterBySearchTerm = (data, searchTerm) => {
 }
 
 
+// Loc san pham theo category (checkbox)
+const filterByCategory = (filteredData, namCheckbox, nuCheckBox) => {
+  console.log(filteredData);
+  console.log(namCheckbox);
+  console.log(nuCheckBox);
+
+
+  if(!namCheckbox && !nuCheckBox) {
+    return filteredData;
+  }
+}
+
 //  Hàm tổng hợp để lọc sản phẩm
 const filterProducts = () => {
   // Lay gia tri nguoi dung khi nhap vao input
   let textSearch = document.querySelector(".search").value;
-  let searchTerm = textSearch.toLowerCase().trim(); // Covert Chua In hoa -> Thuong
+  let searchTerm = textSearch.toLowerCase().trim(); // Covert Chua In hoa -> Thuong, bo khoang trang
 
-  console.log(searchTerm);
+
+  // Truy cap phan tu, check xem nguoi dung click vao checkbox nao ?
+  const namCheckbox = document.querySelector("#option_1").checked;
+  const nuCheckBox = document.querySelector("#option_2").checked;
+  // console.log(namCheckbox);
+  // console.log(nuCheckBox);
+
+
+  let filteredData = data;
+
   // Lọc sản phẩm theo từ khóa
-  let filteredData = filterBySearchTerm(data, searchTerm);
+  filteredData = filterBySearchTerm(data, searchTerm);
+
+
+  // Loc san pham theo category (checkbox)
+  filterByCategory(filteredData, namCheckbox, nuCheckBox);
+
+
 
 
   renderProducts(filteredData); // Hiển thị sản phẩm đã lọc
 
 
 }
-
-
 
 let clearTime;
 
@@ -96,14 +121,24 @@ inputSearch.addEventListener("input", () => {
   clearTimeout(clearTime);
 
   // Neu sau 3s khong nhap nua thi moi goi vao filterProducts();
-  clearTime = setTimeout(()=>{
+  clearTime = setTimeout(() => {
 
     filterProducts();
 
-  }, 1000); //300ms -> 0.3s
+  }, 1000); //1000ms -> 1s
 
 
 });
+
+
+// Lắng nghe sự kiện người dùng click checkbox
+let inputCheckBox = document.querySelectorAll(".form-check-input");
+inputCheckBox.forEach((checkbox, index) => {
+  checkbox.addEventListener("click", () => {
+    filterProducts();
+
+  })
+})
 
 
 renderProducts(data);
