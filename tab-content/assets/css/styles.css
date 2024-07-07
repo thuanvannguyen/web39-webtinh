@@ -1,0 +1,54 @@
+.listing-product {
+  padding-top: 100px;
+  background-color: #ccc;
+}
+
+.btn-listing {
+  border: 1px solid #aa1020;
+  color: #aa1020;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 8px 20px;
+  margin-right: 15px;
+}
+
+.btn-listing.active {
+  background-color: #aa1020;
+  color: #fff;
+}
+
+.tab-content {
+  margin-top: 40px;
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-1 .content {
+  width: 100%;
+  height: 400px;
+  background-color: green;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.tab-2 .content {
+  width: 100%;
+  height: 400px;
+  background-color: orange;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.tab-3 .content {
+  width: 100%;
+  height: 400px;
+  background-color: violet;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.tab-content a {
+  color: #fff;
+}
